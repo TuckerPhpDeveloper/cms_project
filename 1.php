@@ -1,0 +1,1 @@
+<select name="connector_type[]" class="form-control connector_type"><option value="">Select Connector Type</option><option value="CHAdeMo"> CHAdeMo </option> <option value="CCS2"> CCS2 </option> <option value="GBT"> GBT </option> <option value="ACTYPE2"> ACTYPE2 </option> <option value="IEC60309"> IEC60309 </option> <option value="FT15ASKT"> FT15ASKT </option></select>

@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /cms_bigtot_in/
+
+    RewriteRule ^index$ index.php [NC,L]
+    RewriteRule ^dashboard$ dashboard.php [NC,L]
+    RewriteRule ^charging_session_statistics$ charging_session_statistics.php [NC,L]
+    RewriteRule ^chargepoints$ chargepoints.php [NC,L]
+    RewriteRule ^remoteaccess$ remoteaccess.php [NC,L]
+    RewriteRule ^wallettrack$ wallettrack.php [NC,L]
+    RewriteRule ^users$ users.php [NC,L]
+    RewriteRule ^groupusers$ groupusers.php [NC,L]
+    RewriteRule ^ownerusers$ ownerusers.php [NC,L]
+    RewriteRule ^cardusers$ cardusers.php [NC,L]
+    RewriteRule ^giftusers$ giftusers.php [NC,L]
+    RewriteRule ^testers$ testers.php [NC,L]
+    RewriteRule ^freeusers$ freeusers.php [NC,L]
+    RewriteRule ^cms$ cms.php [NC,L]
+    RewriteRule ^cpo$ cpo.php [NC,L]
+    RewriteRule ^stations$ stations.php [NC,L]
+    RewriteRule ^chargers$ chargers.php [NC,L]
+    RewriteRule ^history$ history.php [NC,L]
+    RewriteRule ^earnings$ earnings.php [NC,L]
+    RewriteRule ^faults$ faults.php [NC,L]
+    RewriteRule ^addcms$ addcms.php [NC,L]
+    RewriteRule ^addcpo$ addcpo.php [NC,L]
+    RewriteRule ^addstation$ addstation.php [NC,L]
+    RewriteRule ^addconnector$ addconnector.php [NC,L]
+    RewriteRule ^addwalamount$ addwalamount.php [NC,L]
+    RewriteRule ^addusers$ addusers.php [NC,L]
+    RewriteRule ^logout$ logout.php [NC,L]
+
+    RewriteRule ^connectorstatus_([^/\.]+)?$ connectorstatus.php?con_id=$1 [L]
+    RewriteRule ^connector_([^/\.]+)?$ connector.php?con_id=$1 [L]
+    RewriteRule ^users_transaction_([^/\.]+)?$ users_transaction.php?idtag=$1 [L]
+    RewriteRule ^users_charger_([^/\.]+)?$ users_charger.php?idtag=$1 [L]
+    RewriteRule ^users_group_([^/\.]+)?$ users_group.php?idtag=$1 [L]
+</IfModule>
