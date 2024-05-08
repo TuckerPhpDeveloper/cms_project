@@ -9,7 +9,7 @@ $result .= "
 			<div class='row'>
                 <div class='col-sm-12'>
                     <div class='pd-20 card-box mb-30'> 
-                        <h4 style='text-align: center; color: #3d56d8;'> Live Charging Sessions </h4><br><br>
+                        <h4 style='text-align: center; color: #c42216; padding-top:20px'> Live Charging Sessions </h4><br><br>
                     	<table class='data-table table stripe hover'>
                         	<thead>
                             	<tr>
@@ -138,10 +138,14 @@ if (mysqli_num_rows($query1) > 0) {
                                             <td> $status_notification </td>
                                             <td> $unit </td>
                                             <td> $est_cost </td>
-                                            <td> <span class='badge-success' style='padding: 5px;'> Charging </span> </td>
-                                            <td> 
-                                                     <a class='btn btn-primary' href=$buttonlink style='background-color:red;color: white;'>Stop</a>&nbsp; &nbsp;
-                                            </td> 
+                                            <td>
+  <span class='badge' style='padding: 10px 10px; font-size: 18px; background-color: #28a745; color: #fff; border-radius: 5px; cursor: pointer; display: inline-block;'>Charging</span>
+</td>
+
+<td> 
+  <a class='btn badge' href='$buttonlink' style='padding: 10px 20px; font-size: 18px; background-color: red; color: white; border-radius: 5px; cursor: pointer; text-decoration: none;'>Stop</a>
+</td>
+
                                         </tr>";
     }
 } else {

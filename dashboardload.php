@@ -16,7 +16,7 @@ $result = "<style>
 			  }
 			  #tbl2 td
 			  {
-			  	color: black;
+			  	color: c42216;
 			  	font-size: 14px;
 			  	font-weight: bold;
 			  	text-align: center;
@@ -175,7 +175,7 @@ $result .= "
 
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         
-            <h5 style='color: black;'> Dashboard </h5>
+            <h5 style='color:#c42216;padding-bottom :10px;'> Dashboard </h5>
 			<div class='row clearfix progress-box'>
 				
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30'>
