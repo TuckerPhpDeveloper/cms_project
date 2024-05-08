@@ -175,14 +175,14 @@ $result .= "
 
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         
-            <h5 style='color:#c42216;padding-bottom :10px;'> Dashboard </h5>
+            <h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Dashboard </h2>
 			<div class='row clearfix progress-box'>
 				
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30'>
-					<div class='card-box pd-30' id='id1'>
+					<div class='card-box pd-30' id='id1' style='background-color:#c42216;' >
 						<div class='row'>
 							<div class='col-sm-12'>
-								<h5 class='pt-20 h5' style='text-align: center;'> <b> Charging Points </b> </h5><br>
+								<h5 class='pt-20 h5' style='text-align: center; color: #fff;'> <b> Charging Points </b> </h5><br>
 								<table class='table' id='tbl2'>
 									<thead>
 									  <tr>
@@ -204,16 +204,16 @@ $result .= "
 					</div>
 				</div>
 
-				<div class='col-lg-4 col-md-6 col-sm-12 mb-30'>
-					<div class='card-box pd-30' id='id1'>		
-						<h5 class='pt-20 h5' style='text-align: center;'> <b> Total Connectors </b> </h5>
+				<div class='col-lg-4 col-md-6 col-sm-12 mb-30' '>
+					<div class='card-box pd-30' id='id1'style='background-color:blue;>		
+						<h5 class='pt-20 h5' style='text-align: center; color: #fff;' > <b> Total Connectors </b> </h5>
 						<div class='row'>
 							<div class='col-sm-4'>
 								<img src='images/cpicon.svg' style='width:100px;'>
 							</div>
 							<div class='col-sm-8'><br>
-								<h6> AC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $ac_connectors </h6><br>
-								<h6> DC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $dc_connectors </h6>
+								<h6 style='color: #fff;'>  AC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $ac_connectors </h6><br>
+								<h6 style='color: #fff;'> DC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $dc_connectors </h6>
 							</div>
 						</div>
 					</div>
@@ -235,7 +235,7 @@ $result .= "
 			</div>
 
 
-        	<h5 style='color: black;'> Overall Statistics </h5>
+        	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Overall Statistics </h2>
 			<div class='card-box pd-30'>
                 <div class='row'>
                    
@@ -272,7 +272,7 @@ $result .= "
         	</div><br>
 
 
-        	<h5 style='color: black;'> Live Charger Status </h5>
+        	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Live Charger Status </h2>
 			<div class='row'>";
 
 $con_query = mysqli_query(

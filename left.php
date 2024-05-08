@@ -1,7 +1,7 @@
 
 	<div class="left-side-bar" style="background-color: #c42216;">
 		<div>
-			<div class="logo" style="background-color: #fff;text-align:center;padding:10px 0px 10px 0px;">
+			<div class="logo" style="background-color: #fff;text-align:center;padding:12px 0px 18px 0px;">
 			<img src="images/tuckerlogo.png" alt="logo">
 			</div>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">

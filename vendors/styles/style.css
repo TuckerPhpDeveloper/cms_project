@@ -1458,6 +1458,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
     -ms-flex-align: center;
     align-items: center;
     height: 100%;
+    min-height: 100px;
     width: 50%;
     background-color:gray;
 }
@@ -1536,9 +1537,10 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    height: 70px;
+    height: 100px;
     width: 50%;
     background-color: gray;
+    padding-top: 10px;r
 }
 
 .header-left .brand-logo {
