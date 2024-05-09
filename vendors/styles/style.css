@@ -118,7 +118,9 @@ p {
     max-width: 1120px;
     width: 100%;
 }
-
+.total{
+    color: #fff;
+}
 .pre-loader {
     background: #fff;
     background-position: center center;
@@ -4835,4 +4837,73 @@ body.IE .register-page-wrap .container {
     .register-page-wrap .wizard-content .wizard .steps {
         display: none
     }
+}
+
+:root{
+    --shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    --font1: 'Noto Sans', sans-serif;
+    --font2: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dashboard-card{
+    width: 300px;
+    height: 250px;
+    
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow:    var(--shadow);
+    box-shadow:         var(--shadow);
+    border-radius: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.upcoming{
+    background-color: #2048A3;
+    color:white;
+    
+    
+}
+
+.recording{
+    background-color: #FAAA36;
+    
+}
+
+.zoom{
+    background-color: #D1E40D;
+}
+
+.dashboard-card .title{
+    font-size: 1.2em;
+    font-family: var(--font1);
+    text-transform: capitalize;
+}
+
+.dashboard-card .value{
+    font-size: 1.2em;
+    font-family: var(--font2);
+}
+.dashboard-card .sub{
+    font-size: 1.1em;
+    font-family: var(--font1);
+    text-transform: capitalize;
+}
+.title{
+    color: #fff;
+    font-size: 18px;
+}
+.title_sub{
+    color: #fff;
+    font-size: 24px;
 }

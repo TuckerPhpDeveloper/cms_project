@@ -182,6 +182,7 @@ $result .= "
 					<div class='card-box pd-30' id='id1' style='background-color:#c42216;' >
 						<div class='row'>
 							<div class='col-sm-12'>
+							
 								<h5 class='pt-20 h5' style='text-align: center; color: #fff;'> <b> Charging Points </b> </h5><br>
 								<table class='table' id='tbl2'>
 									<thead>
@@ -205,11 +206,13 @@ $result .= "
 				</div>
 
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30' '>
-					<div class='card-box pd-30' id='id1'style='background-color:blue;>		
-						<h5 class='pt-20 h5' style='text-align: center; color: #fff;' > <b> Total Connectors </b> </h5>
+					<div class='card-box pd-30' id='id1'style='background-color:#5555e8;'>	
+				
+						<h5 class='pt-20 total'  style='text-align: center; color: #fff;'> <b> Total Connectors </b> </h5><br>	
+					
 						<div class='row'>
 							<div class='col-sm-4'>
-								<img src='images/cpicon.svg' style='width:100px;'>
+								<img src='images/cpicon1.svg' style='width:100px;'>
 							</div>
 							<div class='col-sm-8'><br>
 								<h6 style='color: #fff;'>  AC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $ac_connectors </h6><br>
@@ -220,13 +223,13 @@ $result .= "
 				</div>
 
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30'>
-					<div class='card-box pd-30' id='id1'>		
+					<div class='card-box pd-30' id='id1'style='background-color:green;>		
 						<div class='row'>
 							<div class='col-sm-12'>
-								<h5 class='pt-20 h5' style='text-align: center;'> <b> Live Charging Sessions </b> </h5>
-								<h2 class='pt-10' style='text-align: center;'> $active_charging_sessions </h2>
-								<h5 class='pt-10 h5' style='text-align: center;'> Total </h5>
-								<p style='text-align: center;'> $active_kwh Wh Energy Delivered </p>
+								<h5 class='pt-20 h5' style='text-align: center;color: #fff;'> <b> Live Charging Sessions </b> </h5>
+								<h2 class='pt-10' style='text-align: center;color: #fff;'> $active_charging_sessions </h2>
+								<h5 class='pt-10 h5' style='text-align: center;color: #fff;'> Total </h5>
+								<p style='text-align: center;color: #fff;'> $active_kwh Wh Energy Delivered </p>
 							</div>
 						</div>
 					</div>
@@ -236,41 +239,62 @@ $result .= "
 
 
         	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Overall Statistics </h2>
-			<div class='card-box pd-30'>
+			<div class='card-box pd-30' style='width:70%; text-align:center;  justify-content: space-between;'> 
                 <div class='row'>
                    
-                    <div class='col-lg-2 col-md-6 col-sm-10'>
-                        <h5 class='pt-20 h5' style='text-align: center;'> Revenue </h5><br>
+                    <div class='col-lg-4 col-md-6 col-sm-10 '>
+                        <h3 class='pt-20 h3' style='text-align: center;'> Revenue </h3><br>
                         <h4 style='text-align: center;'> &#8377; $revenue </h4>
 	                </div>
 
-            		<!-- <div class='col-lg-3 col-md-6 col-sm-12'>
-                        <h5 class='pt-20 h5' style='text-align: center;'> Energy Used (kWh) </h5><br>
+            		<!-- <div class='col-lg-4 col-md-6 col-sm-12'>
+                        <h5 class='pt-20 h3' style='text-align: center;'> Energy Used (kWh) </h5><br>
                         <h4 style='text-align: center;'> $kwh </h4>
 	                </div> -->
 
-            		<div class='col-lg-3 col-md-6 col-sm-10'>	
-                        <h5 class='pt-20 h5' style='text-align: center;'> Charging Sessions </h5><br>
+            		<div class='col-lg-4 col-md-6 col-sm-10'>	
+                        <h3 class='pt-20 h3' style='text-align: center;'> Charging Sessions </h3><br>
                         <h4 style='text-align: center;'> $charging_sessions </h4>
             		</div>
 
-            		<div class='col-lg-3 col-md-6 col-sm-10'>                
-                        <h5 class='pt-20 h5' style='text-align: center;'> Total Users </h5><br>
+            		<div class='col-lg-4 col-md-6 col-sm-10'>                
+                        <h3 class='pt-20 h3' style='text-align: center;'> Total Users </h3><br>
                         <h4 style='text-align: center;'> $total_users </h4>
             		</div>
 
-            		<!-- <div class='col-lg-3 col-md-6 col-sm-12'>                   
+					<!--<div class='col-lg-3 col-md-6 col-sm-12'>                   
                         <h5 class='pt-20 h5' style='text-align: center;'> New Users </h5><br>
                         <h4 style='text-align: center;'> $active_users </h4>
                     </div> -->
 
-            		<!--<div class='col-lg-3 col-md-6 col-sm-12'>                   
+            		<!--	<div class='col-lg-3 col-md-6 col-sm-12'>                   
                         <h5 class='pt-20 h5' style='text-align: center;'> Faults </h5><br>
                         <h4 style='text-align: center;'> $fault </h4>
                     </div>-->
         		</div>
         	</div><br>
 
+
+			<div class='container'>
+
+        <div class='dashboard-card upcoming'>
+		<i class='fa-solid fa-chart-user' style='color: #fff;'></i>
+            <h2 class='title'> Revenue</h2>
+            <span class='value'>₹ $revenue</span>
+            
+        </div>
+        <div class='dashboard-card recording'>
+            <i class='fas fa-tape '></i>
+			<h2  class='title'> Charging Sessions</h2> 
+            <span class='title sub'> $charging_sessions </span>
+        </div>
+        <div class='dashboard-card zoom'>
+            <i class='fas fa-search'></i>
+            <h2 class='title'>Total Users </h2>
+            <span class='title sub'> $total_users </span>
+        </div>
+
+    </div>
 
         	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Live Charger Status </h2>
 			<div class='row'>";

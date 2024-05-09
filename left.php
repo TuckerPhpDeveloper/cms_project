@@ -1,8 +1,8 @@
 
-	<div class="left-side-bar" style="background-color: #c42216;">
+	<div class="left-side-bar" style="background-color: #000;">
 		<div>
 			<div class="logo" style="background-color: #fff;text-align:center;padding:12px 0px 18px 0px;">
-			<img src="images/tuckerlogo.png" alt="logo">
+			<img src="images/TUCKERCMS.png" alt="logo">
 			</div>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -30,7 +30,7 @@
 						<a href="#" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/reservation.png"></span><span class="mtext"> Reservation </span> </a>
 					</li> -->
 					<li>
-						<a href="charging_session_statistics" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/sessions.png"></span><span class="mtext">Live Charging Sessions </span> </a>
+						<a href="charging_session_statistics" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/sessions.png"></span><span class="mtext">Live ChargingSSS Sessions </span> </a>
 					</li>
 					<li>
 						<a href="chargepoints" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/chargingpoints.png"></span><span class="mtext"> Charge Points </span> </a>
