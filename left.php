@@ -30,7 +30,7 @@
 						<a href="#" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/reservation.png"></span><span class="mtext"> Reservation </span> </a>
 					</li> -->
 					<li>
-						<a href="charging_session_statistics" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/sessions.png"></span><span class="mtext">Live ChargingSSS Sessions </span> </a>
+						<a href="charging_session_statistics" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/sessions.png"></span><span class="mtext">Live Charging Sessions </span> </a>
 					</li>
 					<li>
 						<a href="chargepoints" class="dropdown-toggle no-arrow"> <span class="micon"><img src="images/icons/chargingpoints.png"></span><span class="mtext"> Charge Points </span> </a>

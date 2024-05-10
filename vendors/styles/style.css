@@ -94,8 +94,9 @@ h6 {
     margin: 0;
     padding: 0;
     font-weight: 700;
-    color: #202342;
+    color: #eeeeee;
     font-family: 'Inter', sans-serif;
+    
 }
 
 ol,
@@ -1854,7 +1855,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
 .sidebar-menu .dropdown-toggle {
     display: block;
     padding: 18px 15px 18px 67px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     font-weight: 500;
     letter-spacing: .03em;
@@ -2031,17 +2032,17 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
 
 .sidebar-menu .submenu li a.active,
 .sidebar-menu .submenu li a:hover {
-    color: #fff;
-    background-color: rgba(0, 0, 0, .4)
+    color: #c42216;
+    background-color: #fff;
 }
 
 .sidebar-menu>ul>li>.dropdown-toggle.active {
-    background-color: rgba(0, 0, 0, .4)
+    background-color: #414040;
 }
 
 .sidebar-light .sidebar-menu>ul>li>.dropdown-toggle.active {
-    background-color: #0b132b;
-    color: #fff
+    background-color: #414040;
+    color: #414040;
 }
 
 .sidebar-light .sidebar-menu .dropdown-toggle:hover .micon,
@@ -4885,25 +4886,27 @@ body.IE .register-page-wrap .container {
 }
 
 .dashboard-card .title{
-    font-size: 1.2em;
+    font-size: 18px;
     font-family: var(--font1);
     text-transform: capitalize;
+    color: #fff;
+    font-weight: 600;
 }
 
 .dashboard-card .value{
-    font-size: 1.2em;
+    font-size: 24px;
     font-family: var(--font2);
+    color: #fff;
+    font-weight: 600;
 }
 .dashboard-card .sub{
-    font-size: 1.1em;
+    font-size: 24px;
     font-family: var(--font1);
     text-transform: capitalize;
-}
-.title{
     color: #fff;
-    font-size: 18px;
+       font-weight: 600;
 }
-.title_sub{
+.live{
     color: #fff;
-    font-size: 24px;
+    font-weight: 600;
 }

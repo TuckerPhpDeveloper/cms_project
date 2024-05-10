@@ -10,7 +10,7 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix mb-20">
                         <div class="pull-left">
-                            <h4 style="color: #3d56d8;"> Wallet track </h4><br>
+                            <h4 style="color: #c42216;"> Wallet track </h4><br>
                         </div>
                     </div><br>               
                     <div class="row">
@@ -22,7 +22,7 @@
                                         <th style="text-align: right;" colspan="11"> <a href="addwalamount" style="color: white;"> <button type="button" name="add" class="btn btn-info"> Add Wallet Amount </button> </a></th>
                                     </tr>
                                     <tr>
-                                    <th> Order Id </th>
+                                    <th> Order Id</th>
                                     <th> Customer Name </th>
                                     <th> Customer Mobile </th>
                                     <th> Customer ID </th>

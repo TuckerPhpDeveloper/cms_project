@@ -175,7 +175,7 @@ $result .= "
 
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         
-            <h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Dashboard </h2>
+            <h4 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Dashboard </h4>
 			<div class='row clearfix progress-box'>
 				
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30'>
@@ -208,15 +208,15 @@ $result .= "
 				<div class='col-lg-4 col-md-6 col-sm-12 mb-30' '>
 					<div class='card-box pd-30' id='id1'style='background-color:#5555e8;'>	
 				
-						<h5 class='pt-20 total'  style='text-align: center; color: #fff;'> <b> Total Connectors </b> </h5><br>	
+						<h4 class='pt-20 total'  style='text-align: center; color: #fff;'> <b> Total Connectors </b> </h4><br>	
 					
 						<div class='row'>
 							<div class='col-sm-4'>
 								<img src='images/cpicon1.svg' style='width:100px;'>
 							</div>
 							<div class='col-sm-8'><br>
-								<h6 style='color: #fff;'>  AC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $ac_connectors </h6><br>
-								<h6 style='color: #fff;'> DC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $dc_connectors </h6>
+								<h6 style='color: #fff;font-size:13px;'>  AC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $ac_connectors </h6><br>
+								<h6 style='color: #fff; font-size:13px;'> DC Connectors &nbsp; &nbsp; - &nbsp; &nbsp; $dc_connectors </h6>
 							</div>
 						</div>
 					</div>
@@ -238,8 +238,8 @@ $result .= "
 			</div>
 
 
-        	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Overall Statistics </h2>
-			<div class='card-box pd-30' style='width:70%; text-align:center;  justify-content: space-between;'> 
+        	<h4 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Overall Statistics </h4>
+			<!--<div class='card-box pd-30' style='width:70%; text-align:center;  justify-content: space-between;'> 
                 <div class='row'>
                    
                     <div class='col-lg-4 col-md-6 col-sm-10 '>
@@ -247,10 +247,10 @@ $result .= "
                         <h4 style='text-align: center;'> &#8377; $revenue </h4>
 	                </div>
 
-            		<!-- <div class='col-lg-4 col-md-6 col-sm-12'>
+            		 <div class='col-lg-4 col-md-6 col-sm-12'>
                         <h5 class='pt-20 h3' style='text-align: center;'> Energy Used (kWh) </h5><br>
                         <h4 style='text-align: center;'> $kwh </h4>
-	                </div> -->
+	                </div>
 
             		<div class='col-lg-4 col-md-6 col-sm-10'>	
                         <h3 class='pt-20 h3' style='text-align: center;'> Charging Sessions </h3><br>
@@ -262,13 +262,13 @@ $result .= "
                         <h4 style='text-align: center;'> $total_users </h4>
             		</div>
 
-					<!--<div class='col-lg-3 col-md-6 col-sm-12'>                   
+					<div class='col-lg-3 col-md-6 col-sm-12'>                   
                         <h5 class='pt-20 h5' style='text-align: center;'> New Users </h5><br>
                         <h4 style='text-align: center;'> $active_users </h4>
-                    </div> -->
+                    </div> 
 
-            		<!--	<div class='col-lg-3 col-md-6 col-sm-12'>                   
-                        <h5 class='pt-20 h5' style='text-align: center;'> Faults </h5><br>
+            			<div class='col-lg-3 col-md-6 col-sm-12'>                   
+                        <h5 class='pt-20 h5' revenue> Faults </h5><br>
                         <h4 style='text-align: center;'> $fault </h4>
                     </div>-->
         		</div>
@@ -278,88 +278,104 @@ $result .= "
 			<div class='container'>
 
         <div class='dashboard-card upcoming'>
-		<i class='fa-solid fa-chart-user' style='color: #fff;'></i>
+		<img src='images/revenue.jpg' alt='logo' style='width:100px;height:50px'>
             <h2 class='title'> Revenue</h2>
             <span class='value'>₹ $revenue</span>
             
         </div>
         <div class='dashboard-card recording'>
-            <i class='fas fa-tape '></i>
+		<img src='images/charger.svg'  style='width:100px;height:50px'>
 			<h2  class='title'> Charging Sessions</h2> 
             <span class='title sub'> $charging_sessions </span>
         </div>
         <div class='dashboard-card zoom'>
-            <i class='fas fa-search'></i>
+		<img src='images/user.png' alt='logo' style='width:100px;height:50px'>
             <h2 class='title'>Total Users </h2>
             <span class='title sub'> $total_users </span>
         </div>
 
     </div>
 
-        	<h2 style='color:#c42216;padding-top :50px; padding-bottom:20px;'> Live Charger Status </h2>
-			<div class='row'>";
+	<div style=' padding-top: 50px; padding-bottom: 20px;'> 
+	<h4 style='color:#c42216; padding-bottom: 20px;'>Live Charger Status</h4>
+	<div class='row'>";
 
 $con_query = mysqli_query(
-    $connect,
-    "select * from fca_connectors where charger_id IN (select charger_id from fca_charger where station_id IN ($station_id)) "
+$connect,
+'select * from fca_connectors where charger_id IN (select charger_id from fca_charger where station_id IN ('.$station_id.'))'
 );
 if (mysqli_num_rows($con_query) > 0) {
-    while ($con_row = mysqli_fetch_array($con_query)) {
-        $charger_id = $con_row["charger_id"];
-        $con_id = $con_row["con_no"];
-        $con_qr = $con_row["con_qr_code"];
-        if (array_search($charger_id, $Chargers, true) != "") {
-            $status_notification = "UnAvailable";
-            $query1 = "SELECT `status` FROM `connector_status` WHERE `connector_pk`=(SELECT `connector_pk` FROM `connector` WHERE `charge_box_id`='$charger_id' and `connector_id`=$con_id) ORDER BY `status_timestamp` DESC LIMIT 1";
-            $con_query1 = mysqli_query($con, $query1);
-            while ($con_row1 = mysqli_fetch_array($con_query1)) {
-                $status_notification = $con_row1[0];
-            }
-
-
-            $result .= "
-							<div class='col-lg-6 col-md-6 col-sm-12'>        
-								<div class='card-box pd-30'>
-									<div class='row'>
-										<div class='col-sm-2'>
-											<img src='images/charger.svg' style='width:60px; height: 60px;'>
-										</div>
-										<div class='col-sm-6'>
-											<h5 class='h5'> $charger_id </h5>
-		    	                    		<h6> Connector id : $con_id </h6>
-		    	                    		<h6> Connector qr : $con_qr </h6>
-										</div>
-										<div class='col-sm-4'>
-											<h5 class='pt-20 h5'> $status_notification &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     	      
-												<a href = 'connectorstatus.php?con_id=$con_id'> <i class='fas fa-long-arrow-alt-right' style='font-size:20px'></i> </a>
-											</h5>
-										</div>
-									</div>
-			                	</div><br>
-							</div>";
-        }
-    }
-} else {
-    $result .= "
-						<div class='col-lg-12 col-md-12 col-sm-12'>        
-							<div class='card-box pd-30'>
-								<div class='row'>
-									<div class='col-sm-2'>
-										<img src='images/charger.svg' style='width:60px; height: 60px;'>
-									</div>
-									<div class='col-sm-10'>
-										<h5 class='pt-20 h5'> There is no live charging </h5>
-									</div>
-								</div>
-		                	</div><br>
-						</div>";
+while ($con_row = mysqli_fetch_array($con_query)) {
+$charger_id = $con_row['charger_id'];
+$con_id = $con_row['con_no'];
+$con_qr = $con_row['con_qr_code'];
+if (array_search($charger_id, $Chargers, true) != '') {
+$status_notification = 'UnAvailable';
+$query1 = 'SELECT `status` FROM `connector_status` WHERE `connector_pk`=(SELECT `connector_pk` FROM `connector` WHERE `charge_box_id`=\''.$charger_id.'\' and `connector_id`='.$con_id.') ORDER BY `status_timestamp` DESC LIMIT 1';
+$con_query1 = mysqli_query($con, $query1);
+while ($con_row1 = mysqli_fetch_array($con_query1)) {
+	$status_notification = $con_row1[0];
 }
 
-$result .= "</div>
+// Setting background color based on status
+$background_color = '';
+switch ($status_notification) {
+	case 'Available':
+		$background_color = 'green';
+		break;
+	case 'Preparing':
+		$background_color = 'orange';
+		break;
+	case 'Charging':
+		$background_color = 'orange';
+		break;
+	case 'Faulted':
+		$background_color = '#c42216';
+		break;
+	default:
+		$background_color = 'grey';
+		break;
+}
 
+$result .= '<div class="col-lg-6 col-md-6 col-sm-12">        
+				<div class="card-box pd-30" style="background-color: '.$background_color.';">
+					<div class="row">
+						<div class="col-sm-2">
+							<img src="images/charger.svg" style="width:60px; height: 60px;">
+						</div>
+						<div class="col-sm-6">
+							<h5 class="live"> '.$charger_id.' </h5>
+							<h6  class="live"> Connector id: '.$con_id.' </h6>
+							<h6  class="live"> Connector qr: '.$con_qr.' </h6>
+						</div>
+						<div class="col-sm-4">
+							<h5 class="pt-20 live"> '.$status_notification.' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
+								<a href="connectorstatus.php?con_id='.$con_id.'"> <i class="fas fa-long-arrow-alt-right" style="font-size:20px color:#fff"></i> </a>
+							</h5>
+						</div>
+					</div>
+				</div><br>
+			</div>';
+}
+}
+} else {
+$result .= '<div class="col-lg-12 col-md-12 col-sm-12">        
+		<div class="card-box pd-30" style="background-color: grey;">
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="images/charger.svg" style="width:60px; height: 60px;">
+				</div>
+				<div class="col-sm-10">
+					<h5 class="pt-20 h5"> There is no live charging </h5>
+				</div>
+			</div>
+		</div><br>
+	</div>';
+}
 
-			</div>";
+$result .= '</div></div>';
 
 echo $result;
+
 
 ?>

@@ -123,7 +123,7 @@ if ($obj->status == "true") {
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
             <div class='container-fluid'>
-        	<h5 style='color: $cms_color;'> Charge Point Details </h5><br>
+        	<h4 style='color: #c42216; padding-top:20px'> Charge Point Details </h4><br>
 			<div class='row'>";
 			
    
@@ -146,8 +146,8 @@ if (array_search($charger_id, $Chargers, true) != "") {
 					if($con_row1 = mysqli_fetch_array($con_query1))
 					{
 						$status_notification = $con_row1[0];
-						$status_color=black;
-							$back_color=lightgreen;
+						$status_color=blackr;
+							$back_color=green;
 
 
 					}
@@ -160,8 +160,8 @@ if (array_search($charger_id, $Chargers, true) != "") {
 					else
 					{
 					    	$status_notification ="Offline";
-																				$status_color=red;
-																				$back_color=lightgray;
+																				$status_color=black;
+																				$back_color=grey;
 					}
 					
 
@@ -175,10 +175,10 @@ if (array_search($charger_id, $Chargers, true) != "") {
 											<img src='images\assets\charger.svg' style='width:60px; height: 60px;'>
 										</div>
 										<div class='col-sm-6'>
-											<h5 class='h5'> $charger_id </h5>
+											<h5 class=''> $charger_id </h5>
 		    	                    		<h6> $con_id>$con_qr </h6>
-											<h7> $station_name </h7>
-											<h7> $station_city,$station_state </h7>
+											<h6> $station_name </h6>
+											<h6> $station_city,$station_state </h6>
 										</div>
 										<div class='col-sm-4'>
 											<h5 class='pt-20 h5'style='color: $status_color;'> $status_notification &nbsp;      	      
